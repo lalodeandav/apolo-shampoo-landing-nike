@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shampoo Estimulante Ultra Potente | Apolo</title>
+<meta name="description" content="Shampoo Estimulante Ultra Potente con Capilia Longa™. Ayuda a frenar la caída del cabello desde la raíz. Garantía de 90 días.">
+<meta property="og:title" content="Shampoo Estimulante Ultra Potente | Apolo">
+<meta property="og:description" content="¿Tu cabello te está abandonando? Detenlo hoy. Shampoo con Capilia Longa™ — 89% menos caída a 150 días. Garantía de 90 días.">
+<meta name="twitter:title" content="Shampoo Estimulante Ultra Potente | Apolo">
+<meta name="twitter:description" content="¿Tu cabello te está abandonando? Detenlo hoy. Shampoo con Capilia Longa™ — 89% menos caída a 150 días. Garantía de 90 días.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='0' fill='%230a0a0a'/%3E%3Cpath d='M32 12c8 11 14 19 14 27a14 14 0 1 1-28 0c0-8 6-16 14-27z' fill='%2300edd4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://apolocosmetics.com">
+<!-- Una sola familia tipográfica, como pide la disciplina de Nike DESIGN.md:
+     un solo nivel "display" (masivo, mayúsculas) reservado para el hero,
+     y un nivel de texto silencioso para todo lo demás. Nada de serif
+     decorativo compitiendo por atención. -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* ---- superficie: negro + un solo gris, como canvas/soft-cloud de Nike ---- */
+    --bg:#0a0a0a;
+    --bg-alt:#141414;
+    --bg-alt2:#111315;
+    --card:#1c1d1e;
+    --card-border:#2c2d2e;
+    --card-border-hover:#3d3f40;
+    /* ---- el único color de marca: reservado para señales de compra, prueba y garantía ---- */
+    --mint:#00edd4;
+    --mint-ink:#062622;
+    --mint-dim:rgba(0,237,212,.12);
+    --mint-dim2:rgba(0,237,212,.28);
+    --red:#fb2c2c;
+    --text:#efefef;
+    --text-dim:#9a9a9a;
+    --text-dim2:#707070;
+    --white:#ffffff;
+    /* ---- radios: 0 en contenedores, píldora en todo lo accionable — regla Nike ---- */
+    --r-none:0px;
+    --r-sm:4px;
+    --r-pill:100px;
+    /* ---- grid base de 8px ---- */
+    --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px;
+    --sp-5:40px; --sp-6:48px; --sp-7:64px; --sp-8:88px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; overflow-x:hidden;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Poppins',sans-serif;
+    font-weight:400;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit; cursor:pointer; border:none; background:none;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--sp-3);}
+
+  /* Eyebrow: wayfinding neutro (como caption-md de Nike), no decoración.
+     El único toque de color es un cuadro de 6px — un guiño de marca, no un llamativo. */
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    color:var(--text-dim); font-weight:600; font-size:13px; letter-spacing:.14em;
+    text-transform:uppercase; margin-bottom:var(--sp-2);
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; background:var(--mint); flex-shrink:0;}
+  .eyebrow.center{justify-content:center;}
+
+  h1,h2,h3{font-weight:800; letter-spacing:-.01em; color:var(--white); font-family:'Poppins',sans-serif;}
+  .section{padding:var(--sp-8) 0;}
+  .section-alt{background:var(--bg-alt);}
+  .center{text-align:center;}
+
+  /* Botones: píldora sólida, sin sombra, sin elevación. El feedback es
+     "tap collapse" (escala + opacidad), como el pressed-state de Nike —
+     no una sombra ni un desplazamiento. */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    background:var(--mint); color:var(--mint-ink); font-weight:700; font-size:16px;
+    padding:16px 32px; border-radius:var(--r-pill); min-height:48px;
+    transition:transform .12s ease, opacity .12s ease, background-color .12s ease;
+  }
+  .btn:hover{background:#33f2de;}
+  .btn:active{transform:scale(.97); opacity:.85;}
+  .btn-ghost{
+    background:transparent; border:1px solid var(--card-border); color:var(--text);
+    font-weight:600; padding:10px 20px; border-radius:var(--r-pill); font-size:14px;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .btn-ghost:hover{border-color:var(--card-border-hover); color:var(--white);}
+  .btn-block{width:100%;}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    background:var(--mint); color:var(--mint-ink); font-weight:600; font-size:13px;
+    text-align:center; padding:9px 16px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:100; background:rgba(10,10,10,.9);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--card-border);
+    transition:border-color .25s ease, background-color .25s ease;
+  }
+  header.scrolled{background:rgba(8,8,8,.96); border-bottom-color:var(--card-border-hover);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:var(--sp-2) var(--sp-3);}
+  .logo{font-size:24px; font-weight:800; color:var(--white); letter-spacing:-.01em;}
+  .logo span{color:var(--mint);}
+  .nav-links{display:flex; gap:32px; font-size:14px; font-weight:500; color:var(--text-dim);}
+  .nav-links a{position:relative; padding-bottom:4px;}
+  .nav-links a::after{content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:var(--white); transform:scaleX(0); transition:transform .18s ease;}
+  .nav-links a:hover{color:var(--white);}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-right{display:flex; align-items:center; gap:16px;}
+  .nav-mobile-toggle, .nav-links-mobile{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:var(--sp-6) 0 var(--sp-4);}
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:var(--sp-7); align-items:center;}
+
+  /* Titular: un solo tono, mayúsculas, tamaño masivo — el "display-campaign"
+     de Nike (96px / line-height .9 / uppercase). Sin subrayados decorativos:
+     el color de marca se reserva para la línea de mandato de abajo. */
+  .hero h1{
+    font-size:clamp(34px, 5.4vw, 66px); line-height:.98; text-transform:uppercase;
+    margin-bottom:14px; font-weight:800;
+  }
+  .hero .stop{
+    display:block; font-size:clamp(34px, 5.4vw, 66px); line-height:.98; text-transform:uppercase;
+    font-weight:900; color:var(--mint); margin-bottom:var(--sp-4); letter-spacing:-.01em;
+  }
+  .badge{
+    display:inline-flex; align-items:center; gap:8px; background:var(--mint-dim);
+    border:1px solid var(--mint-dim2); color:var(--mint); font-size:13px; font-weight:700;
+    padding:8px 16px; border-radius:var(--r-pill); margin-bottom:var(--sp-3);
+  }
+  .hero-desc{color:var(--text-dim); font-size:16px; max-width:480px; margin-bottom:var(--sp-3);}
+  .checks{display:flex; flex-direction:column; gap:10px; margin-bottom:var(--sp-4);}
+  .checks li{display:flex; align-items:center; gap:10px; font-size:15px; color:var(--text);}
+  .checks .tick{
+    width:20px; height:20px; border-radius:var(--r-pill); background:var(--mint); color:var(--mint-ink);
+    display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; flex-shrink:0;
+  }
+  .price-row{display:flex; align-items:baseline; gap:12px; margin-bottom:var(--sp-4);}
+  .price-now{font-size:36px; font-weight:800; color:var(--mint);}
+  .price-was{font-size:18px; color:var(--text-dim2); text-decoration:line-through;}
+
+  /* Selector de plan: tarjeta plana, sin radio salvo el estado activo,
+     que se invierte por completo — igual que filter-chip-active de Nike. */
+  .plans{border:1px solid var(--card-border); border-radius:var(--r-none); overflow:hidden; margin-bottom:var(--sp-2);}
+  .plan{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:16px 18px; border-bottom:1px solid var(--card-border); background:var(--card);
+    cursor:pointer; position:relative; transition:background-color .15s ease, border-color .15s ease;
+  }
+  .plan:last-child{border-bottom:none;}
+  .plan.selected{background:var(--mint-dim); border-color:var(--mint-dim2);}
+  .plan-left{display:flex; align-items:center; gap:14px;}
+  .plan-name{font-weight:700; font-size:15px; color:var(--white);}
+  .plan-sub{font-size:13px; color:var(--text-dim);}
+  .plan-price{text-align:right;}
+  .plan-price .now{font-weight:800; font-size:17px; color:var(--white);}
+  .plan-price .was{font-size:12px; color:var(--text-dim2); text-decoration:line-through; display:block;}
+  .tag{
+    position:absolute; top:-9px; right:16px; background:var(--red); color:#fff; font-size:11px;
+    font-weight:700; padding:3px 12px; border-radius:var(--r-pill); text-transform:uppercase; letter-spacing:.03em;
+  }
+  .save-tag{background:var(--mint); color:var(--mint-ink); font-size:11px; font-weight:700; padding:2px 10px; border-radius:var(--r-pill); margin-left:8px;}
+  .plan-perk{font-size:13px; color:var(--mint); font-weight:600; padding:10px 18px; background:var(--bg-alt2);}
+
+  .guarantee-mini{
+    display:flex; align-items:center; gap:10px; font-size:13px; color:var(--text-dim);
+    margin-top:var(--sp-2); justify-content:center;
+  }
+  .guarantee-mini b{color:var(--mint);}
+
+  .rating-row{display:flex; align-items:center; gap:10px; margin-top:var(--sp-3); font-size:13px; color:var(--text-dim);}
+  .stars{color:var(--mint); letter-spacing:2px; font-size:14px;}
+
+  /* La foto de producto se planta sobre una placa plana neutra —
+     el "soft-cloud" de Nike — en vez de un resplandor difuminado. */
+  .hero-img-wrap{position:relative; display:flex; justify-content:center; align-items:center;}
+  .hero-img-wrap img{max-width:420px; width:100%; position:relative; z-index:1;}
+  .product-plate{
+    position:absolute; width:78%; aspect-ratio:1/1; background:var(--bg-alt2);
+    border:1px solid var(--card-border); border-radius:var(--r-none);
+  }
+
+  /* ---------- Stats strip ---------- */
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--card-border);
+    border-bottom:1px solid var(--card-border); margin-top:var(--sp-6);
+  }
+  .stat{text-align:center; padding:var(--sp-3) 12px; border-right:1px solid var(--card-border);}
+  .stat:last-child{border-right:none;}
+  .stat b{display:block; font-size:26px; font-weight:800; color:var(--white); font-variant-numeric:tabular-nums;}
+  .stat span{font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.06em;}
+
+  /* ---------- Problema real ---------- */
+  .problem-head{max-width:640px; margin:0 auto var(--sp-6); text-align:center;}
+  .problem-head h2{font-size:34px; margin-bottom:14px; text-transform:uppercase; letter-spacing:-.01em;}
+  .problem-head p{color:var(--text-dim); font-size:16px;}
+  .problem-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-3);}
+  .problem-card{background:var(--card); border:1px solid var(--card-border); border-radius:var(--r-none); overflow:hidden; transition:border-color .2s ease;}
+  .problem-card img{width:100%; height:230px; object-fit:cover;}
+  .problem-card-body{padding:var(--sp-3);}
+  .problem-card-body h3{font-size:18px; margin-bottom:8px; text-transform:none;}
+  .problem-card-body p{font-size:14px; color:var(--text-dim);}
+
+  /* ---------- Testimonios ---------- */
+  .testi-note{
+    max-width:640px; margin:0 auto var(--sp-4); text-align:center; background:var(--bg-alt2);
+    border:1px solid rgba(251,44,44,.35); border-radius:var(--r-none); padding:14px 20px; font-size:13px; color:#ff8b8b;
+  }
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-3);}
+  .testi-card{
+    background:var(--card); border:1px solid var(--card-border); border-radius:var(--r-none); padding:var(--sp-3);
+    display:flex; flex-direction:column; gap:16px; transition:border-color .2s ease;
+  }
+  .testi-top{display:flex; align-items:center; gap:12px;}
+  .avatar{
+    width:48px; height:48px; border-radius:var(--r-pill); background:var(--bg-alt2); border:1px solid var(--card-border);
+    display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--text-dim); font-size:13px;
+  }
+  .testi-name{font-weight:700; font-size:14px; color:var(--white);}
+  .testi-verified{font-size:11px; color:var(--mint); font-weight:600;}
+  .testi-quote{font-size:14px; color:var(--text-dim); font-style:italic;}
+  .testi-result{font-size:12px; color:var(--mint); font-weight:700; text-transform:uppercase; letter-spacing:.04em;}
+  .testi-placeholder-badge{
+    align-self:flex-start; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.05em;
+    color:#ff8b8b; border:1px solid rgba(251,44,44,.4); padding:3px 10px; border-radius:var(--r-pill);
+  }
+
+  /* ---------- Formula ---------- */
+  .formula-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:var(--sp-7); align-items:center;}
+  .formula-img{border-radius:var(--r-none); overflow:hidden; background:var(--bg-alt2); border:1px solid var(--card-border);}
+  .formula-img img{width:100%; height:100%; object-fit:cover;}
+  .formula-copy h2{font-size:32px; margin-bottom:16px; text-transform:uppercase;}
+  .formula-copy p.lead{color:var(--text-dim); font-size:15px; margin-bottom:var(--sp-4); max-width:520px;}
+  .active-card{
+    display:flex; gap:16px; background:var(--card); border:1px solid var(--card-border); border-radius:var(--r-none);
+    padding:18px 20px; margin-bottom:var(--sp-2); transition:border-color .2s ease;
+  }
+  .active-icon{
+    width:44px; height:44px; border-radius:var(--r-none); background:var(--bg-alt2); border:1px solid var(--card-border); display:flex; align-items:center;
+    justify-content:center; font-size:20px; flex-shrink:0;
+  }
+  .active-card h4{font-size:15px; color:var(--white); margin-bottom:4px;}
+  .active-card p{font-size:13px; color:var(--text-dim);}
+  .cite-note{font-size:12px; color:var(--text-dim2); margin-top:6px; border-left:2px solid var(--card-border); padding-left:10px;}
+
+  /* ---------- Evidencia clinica ---------- */
+  .evidence-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--sp-4); margin:var(--sp-5) 0 var(--sp-2);}
+  .evidence-num{font-size:52px; font-weight:800; color:var(--mint); text-align:center; font-variant-numeric:tabular-nums;}
+  .evidence-label{text-align:center; font-size:14px; color:var(--text-dim); margin-top:6px;}
+  .evidence-fine{text-align:center; font-size:12px; color:var(--text-dim2); margin-top:8px;}
+
+  /* CTA banda: tarjeta plana, sin degradado — el color vive en el botón, no en el fondo. */
+  .cta-band{
+    background:var(--card); border:1px solid var(--card-border); border-radius:var(--r-none); padding:var(--sp-4) var(--sp-5);
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .cta-band h3{font-size:22px; margin-bottom:6px; text-transform:none;}
+  .cta-band p{color:var(--text-dim); font-size:14px;}
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:var(--sp-7); align-items:center;}
+  .pricing-grid .hero-img-wrap img{max-width:340px;}
+  .plan-full{padding:var(--sp-2);}
+
+  /* ---------- Tabla comparativa ---------- */
+  table{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--card-border);}
+  thead th{
+    text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim);
+    padding:18px 22px; border-bottom:1px solid var(--card-border);
+  }
+  thead th:not(:first-child), tbody td:not(:first-child){text-align:center;}
+  tbody td{padding:16px 22px; border-bottom:1px solid var(--card-border); font-size:14px;}
+  tbody tr:last-child td{border-bottom:none;}
+  .col-apolo{color:var(--mint); font-weight:700;}
+  .yes{width:26px; height:26px; border-radius:var(--r-pill); background:var(--mint); color:var(--mint-ink); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;}
+  .no{width:26px; height:26px; border-radius:var(--r-pill); background:var(--bg-alt2); border:1px solid var(--card-border); color:var(--text-dim2); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:13px;}
+
+  /* ---------- Garantia ---------- */
+  .guarantee-block{
+    max-width:760px; margin:0 auto; text-align:center; background:var(--card);
+    border:1px solid var(--mint-dim2); border-radius:var(--r-none); padding:var(--sp-6) var(--sp-5);
+  }
+  .guarantee-badge{
+    width:88px; height:88px; border-radius:var(--r-pill); background:var(--mint-dim); border:2px solid var(--mint);
+    display:flex; align-items:center; justify-content:center; margin:0 auto var(--sp-3); font-size:34px;
+  }
+  .guarantee-block h2{font-size:28px; margin-bottom:16px; text-transform:none;}
+  .guarantee-block p{color:var(--text-dim); font-size:15px; max-width:540px; margin:0 auto;}
+  .guarantee-days{font-size:64px; font-weight:800; color:var(--mint); line-height:1;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:var(--sp-2);}
+  details{background:var(--card); border:1px solid var(--card-border); border-radius:var(--r-none); padding:4px 20px; transition:border-color .2s ease;}
+  details[open]{border-color:var(--card-border-hover);}
+  summary{
+    list-style:none; cursor:pointer; padding:16px 0; font-weight:600; font-size:15px; color:var(--white);
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  /* El "+" queda neutro por defecto y solo se invierte a menta cuando la
+     pregunta está abierta — el mismo patrón binario que filter-chip-active. */
+  summary .plus{
+    width:24px; height:24px; border-radius:var(--r-pill); background:transparent; border:1px solid var(--card-border-hover); color:var(--text-dim);
+    display:flex; align-items:center; justify-content:center; font-size:16px; flex-shrink:0; transition:transform .25s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  }
+  details[open] summary .plus{transform:rotate(45deg); background:var(--mint); color:var(--mint-ink); border-color:var(--mint);}
+  details .answer-inner{overflow:hidden; max-height:0; transition:max-height .32s ease;}
+  details[open] .answer-inner{max-height:none;}
+  .answer-pad{padding-bottom:18px;}
+  details p{color:var(--text-dim); font-size:14px; padding-bottom:0; max-width:640px;}
+  .faq-new-tag{font-size:10px; color:var(--mint); border:1px solid var(--mint-dim2); border-radius:var(--r-pill); padding:2px 8px; margin-right:8px; font-weight:700;}
+
+  /* ---------- Cierre: superficie plana, sin degradado radial ---------- */
+  .closing{
+    background:var(--bg-alt); border-top:1px solid var(--card-border);
+    text-align:center; padding:var(--sp-8) 0;
+  }
+  .closing h2{font-size:36px; max-width:680px; margin:0 auto 14px; text-transform:uppercase;}
+  .closing p{color:var(--text-dim); margin-bottom:var(--sp-4);}
+
+  /* ---------- Footer ---------- */
+  footer{padding:var(--sp-5) 0 var(--sp-3); border-top:1px solid var(--card-border);}
+  .footer-grid{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:32px; margin-bottom:var(--sp-4);}
+  .footer-links{display:flex; gap:48px; flex-wrap:wrap;}
+  .footer-col h5{font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-dim); margin-bottom:14px;}
+  .footer-col a{display:block; font-size:14px; color:var(--text-dim); margin-bottom:10px;}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    padding-top:var(--sp-3); border-top:1px solid var(--card-border); font-size:13px; color:var(--text-dim2);
+  }
+
+  /* ---------- Sticky mobile bar ---------- */
+  .sticky-bar{
+    position:fixed; bottom:0; left:0; right:0; z-index:90; background:rgba(10,10,10,.97);
+    backdrop-filter:blur(10px); border-top:1px solid var(--card-border); padding:12px 20px;
+    display:none; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .sticky-bar .price{font-weight:800; color:var(--white); font-size:16px;}
+  .sticky-bar .price small{display:block; font-size:11px; color:var(--text-dim); font-weight:400;}
+
+  /* accesibilidad: foco visible consistente */
+  a:focus-visible, button:focus-visible, summary:focus-visible,
+  input:focus-visible{
+    outline:2px solid var(--mint); outline-offset:3px;
+  }
+
+  /* barra de progreso de lectura */
+  .progress{
+    position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+    background:var(--mint); transition:width .1s linear;
+  }
+
+  /* revelado al hacer scroll — progresivo, no decorativo */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1; transform:translateY(0)}
+  .reveal-stagger > *{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease}
+  .reveal-stagger.in > *{opacity:1; transform:translateY(0)}
+  .reveal-stagger.in > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.in > *:nth-child(2){transition-delay:.12s}
+  .reveal-stagger.in > *:nth-child(3){transition-delay:.19s}
+  .reveal-stagger.in > *:nth-child(4){transition-delay:.26s}
+
+  /* Tarjetas: sin elevación, sin sombra. El único cue de profundidad es el
+     cambio de color de borde — igual que el hairline inset de Nike. */
+  @media(hover:hover){
+    .problem-card:hover, .testi-card:hover, .active-card:hover{border-color:var(--card-border-hover);}
+    .plan:not(.selected):hover{background:#202122}
+  }
+
+  .radio-input{
+    appearance:none; -webkit-appearance:none; width:20px; height:20px; margin:0;
+    border-radius:var(--r-pill); border:2px solid var(--text-dim2); flex-shrink:0; position:relative;
+    cursor:pointer; transition:border-color .15s ease;
+  }
+  .radio-input:checked{border-color:var(--mint)}
+  .radio-input:checked::after{
+    content:""; position:absolute; inset:3px; border-radius:var(--r-pill); background:var(--mint);
+  }
+  .plan-left label{cursor:pointer}
+
+  @media(max-width:960px){
+    .hero-grid, .formula-grid, .pricing-grid{grid-template-columns:1fr;}
+    .hero-grid{gap:var(--sp-5);}
+    .problem-grid, .testi-grid, .evidence-grid{grid-template-columns:1fr;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2){border-right:none;}
+    .stat{border-bottom:1px solid var(--card-border);}
+    .nav-links{display:none;}
+    .section{padding:var(--sp-6) 0;}
+    .cta-band{flex-direction:column; align-items:flex-start;}
+    .sticky-bar{display:flex;}
+    body{padding-bottom:76px;}
+    .formula-img{order:-1;}
+  }
+
+  @media(prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger > *{opacity:1 !important; transform:none !important; transition:none !important}
+    html{scroll-behavior:auto}
+    .btn, .problem-card, .testi-card, .active-card, .plan{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="topbar">Envío gratis en pedidos de 2+ shampoos · Garantía de 90 días</div>
+
+<header>
+  <nav class="nav wrap">
+    <a href="#" class="logo">apolo<span>.</span></a>
+    <div class="nav-links">
+      <a href="#problema">El problema</a>
+      <a href="#formula">Fórmula</a>
+      <a href="#comparativa">Apolo vs. resto</a>
+      <a href="#garantia">Garantía</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <a href="#comprar" class="btn-ghost">Comprar ahora</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Shampoo Estimulante Ultra Potente · 400 mL</span>
+        <h1>¿Tu cabello te está abandonando?</h1>
+        <span class="stop">Detenlo hoy.</span>
+
+        <div class="badge">🛡️ Garantía de 90 días · 100% tu dinero de vuelta</div>
+
+        <p class="hero-desc">Fórmula Ultra Potente con Capilia Longa™, formulada para ayudar a disminuir la caída del cabello y cuidar el folículo capilar desde la raíz.</p>
+
+        <ul class="checks">
+          <li><span class="tick">✓</span> Ayuda a frenar la caída del cabello</li>
+          <li><span class="tick">✓</span> Cuida el folículo capilar desde la raíz</li>
+          <li><span class="tick">✓</span> Limpieza profunda sin resecar</li>
+        </ul>
+
+        <div class="price-row">
+          <span class="price-now" id="hero-price">$1,197</span>
+          <span class="price-was" id="hero-price-was">$1,996</span>
+        </div>
+
+        <div class="plans" id="hero-plans" role="radiogroup" aria-label="Elige tu plan">
+          <label class="plan" data-price="749" data-was="998" data-name="1 Shampoo" data-sub="30 días de tratamiento">
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-hero" value="749"><div><div class="plan-name">1 Shampoo</div><div class="plan-sub">30 días de tratamiento</div></div></div>
+            <div class="plan-price"><span class="was">$998</span><span class="now">$749</span></div>
+          </label>
+          <label class="plan selected" data-price="1197" data-was="1996" data-name="2 Shampoo" data-sub="60 días de tratamiento">
+            <span class="tag">Más vendido</span>
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-hero" value="1197" checked><div><div class="plan-name">2 Shampoo <span class="save-tag">Ahorras $1,797</span></div><div class="plan-sub">60 días de tratamiento</div></div></div>
+            <div class="plan-price"><span class="was">$1,996</span><span class="now">$1,197</span></div>
+          </label>
+          <label class="plan" data-price="1596" data-was="2994" data-name="3 Shampoo" data-sub="90 días de tratamiento · alineado a tu ventana de resultados">
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-hero" value="1596"><div><div class="plan-name">3 Shampoo <span class="save-tag">Mejor valor</span></div><div class="plan-sub">90 días · cubre toda tu ventana de resultados</div></div></div>
+            <div class="plan-price"><span class="was">$2,994</span><span class="now">$1,596</span></div>
+          </label>
+          <div class="plan-perk">+ Envío Priority gratis</div>
+        </div>
+
+        <a href="#comprar" class="btn btn-block">Quiero recuperar mi cabello →</a>
+
+        <div class="guarantee-mini">🛡️ <b>90 días</b> de garantía · Sin letra chica</div>
+
+        <div class="rating-row">
+          <span class="stars">★★★★★</span>
+          <span>4.9 · 1,689 reseñas verificadas en nuestro Bálsamo Anticaída Apolo</span>
+        </div>
+      </div>
+
+      <div class="hero-img-wrap">
+        <div class="product-plate"></div>
+        <img src="https://apolocosmetics.com/cdn/shop/files/Shampooapolo_f65c26a6-f993-46ff-a9e8-e09d4f71cdf1.png" alt="Shampoo Estimulante Ultra Potente Apolo">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>+50K</b><span>Clientes Apolo</span></div>
+      <div class="stat"><b>117K+</b><span>Seguidores en TikTok</span></div>
+      <div class="stat"><b>2 años</b><span>Desarrollando esta fórmula</span></div>
+      <div class="stat"><b>90 días</b><span>Garantía de satisfacción</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA REAL ============ -->
+<section class="section" id="problema">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <span class="eyebrow center">El problema real</span>
+      <h2>Lo notas en la almohada. Lo notas en la regadera.</h2>
+      <p>La caída no llega de golpe. Llega en silencio — hasta que ya es demasiada. Si esto se parece a ti, estás a tiempo.</p>
+    </div>
+    <div class="problem-grid reveal-stagger">
+      <div class="problem-card">
+        <img src="https://apolocosmetics.com/cdn/shop/files/2_f97f9ec1-192d-4808-b3a6-192b5672a51d.png" alt="Entradas y coronilla más visibles">
+        <div class="problem-card-body">
+          <h3>Entradas y coronilla más visibles</h3>
+          <p>La línea del cabello retrocede. La luz pega donde antes no llegaba. Y no es por imaginación tuya.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <img src="https://apolocosmetics.com/cdn/shop/files/1_4048a56b-d5be-4f96-90dd-a799de0a4b86.png" alt="Tu pelo en la ducha">
+        <div class="problem-card-body">
+          <h3>Tu pelo en la ducha...</h3>
+          <p>Cada vez que pasas la mano o lavas, queda pelo en tus manos. La regadera ya no perdona.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <img src="https://apolocosmetics.com/cdn/shop/files/4_0ab11071-62aa-4c2b-846e-1667ab799578.png" alt="Predisposición genética">
+        <div class="problem-card-body">
+          <h3>Predisposición genética</h3>
+          <p>La genética es uno de los factores que más influye en la caída de cabello. Saberlo a tiempo te permite tomar mejores decisiones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS (PLANTILLA) ============ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <span class="eyebrow center">Resultados reales</span>
+      <h2>Lo que dicen quienes ya lo probaron</h2>
+      <p>Resultados reales en 3 a 5 meses de uso constante.</p>
+    </div>
+
+    <div class="testi-note">⚠️ Plantilla de ejemplo — reemplaza estas 3 tarjetas con testimonios reales (foto, nombre y resultado con fecha) antes de publicar. Es el hueco más caro de la página hoy: 0 testimonios visibles.</div>
+
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card">
+        <span class="testi-placeholder-badge">Placeholder</span>
+        <div class="testi-top">
+          <div class="avatar">JM</div>
+          <div>
+            <div class="testi-name">[Nombre del cliente]</div>
+            <div class="testi-verified">✓ Comprador verificado</div>
+          </div>
+        </div>
+        <p class="testi-quote">"[Cita textual del cliente sobre su experiencia, con un resultado concreto]"</p>
+        <span class="testi-result">[Resultado] en [semana X]</span>
+      </div>
+      <div class="testi-card">
+        <span class="testi-placeholder-badge">Placeholder</span>
+        <div class="testi-top">
+          <div class="avatar">RC</div>
+          <div>
+            <div class="testi-name">[Nombre del cliente]</div>
+            <div class="testi-verified">✓ Comprador verificado</div>
+          </div>
+        </div>
+        <p class="testi-quote">"[Cita textual del cliente sobre su experiencia, con un resultado concreto]"</p>
+        <span class="testi-result">[Resultado] en [semana X]</span>
+      </div>
+      <div class="testi-card">
+        <span class="testi-placeholder-badge">Placeholder</span>
+        <div class="testi-top">
+          <div class="avatar">AV</div>
+          <div>
+            <div class="testi-name">[Nombre del cliente]</div>
+            <div class="testi-verified">✓ Comprador verificado</div>
+          </div>
+        </div>
+        <p class="testi-quote">"[Cita textual del cliente sobre su experiencia, con un resultado concreto]"</p>
+        <span class="testi-result">[Resultado] en [semana X]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULA ============ -->
+<section class="section" id="formula">
+  <div class="wrap">
+    <div class="formula-grid">
+      <div class="formula-img reveal">
+        <img src="https://apolocosmetics.com/cdn/shop/files/3_cd32c37d-ae09-466f-ab91-c4dd3d7fee13.png" alt="Modelo usando Shampoo Apolo">
+      </div>
+      <div class="formula-copy reveal">
+        <span class="eyebrow">La fórmula</span>
+        <h2>4 activos que harán la diferencia</h2>
+        <p class="lead">No es magia ni promesas vacías. Es ingeniería capilar: ingredientes con respaldo clínico, formulados en proporción óptima por nuestro equipo de Químicos Fármaco Biólogos especializados.</p>
+
+        <div class="active-card">
+          <div class="active-icon">🧬</div>
+          <div>
+            <h4>Capilia Longa™ · El activo estrella</h4>
+            <p>Patente española derivada de células madre de cúrcuma. Reactiva la papila dérmica del folículo para reiniciar el ciclo de crecimiento.</p>
+            <div class="cite-note">*Estudio clínico independiente — [agregar institución, tamaño de muestra y duración]</div>
+          </div>
+        </div>
+        <div class="active-card">
+          <div class="active-icon">🌿</div>
+          <div><h4>Romero</h4><p>Estimula la microcirculación del cuero cabelludo. Más sangre = más oxígeno y nutrientes al folículo.</p></div>
+        </div>
+        <div class="active-card">
+          <div class="active-icon">🪴</div>
+          <div><h4>Aloe Vera</h4><p>Hidrata, calma irritación y equilibra el pH. Cuero cabelludo sano = cabello que se queda.</p></div>
+        </div>
+        <div class="active-card">
+          <div class="active-icon">🍃</div>
+          <div><h4>Menta</h4><p>Sensación refrescante y limpieza profunda. Desbloquea folículos obstruidos por grasa y residuos.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVIDENCIA CLINICA ============ -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <span class="eyebrow center">Evidencia clínica</span>
+      <h2>Los números que respaldan a Capilia Longa™</h2>
+      <p>Estudios clínicos independientes con Capilia Longa™ — el activo principal de nuestra fórmula.</p>
+    </div>
+    <div class="evidence-grid reveal-stagger">
+      <div><div class="evidence-num">+35%</div><div class="evidence-label">Más densidad capilar en 12 semanas</div></div>
+      <div><div class="evidence-num">89%</div><div class="evidence-label">Reducción de caída tras 150 días</div></div>
+      <div><div class="evidence-num">100%</div><div class="evidence-label">Libre de crueldad animal</div></div>
+    </div>
+    <p class="evidence-fine center">Datos clínicos del fabricante del activo. Los resultados individuales pueden variar. Úsalo a diario: la consistencia es lo que marca la diferencia.</p>
+
+    <div style="height:var(--sp-4);"></div>
+
+    <div class="cta-band reveal">
+      <div>
+        <h3>La evidencia ya está de tu lado.</h3>
+        <p>Ahora dale a tu cabello las 12 semanas que necesita para demostrarlo.</p>
+      </div>
+      <a href="#comprar" class="btn">Empezar mi tratamiento →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRECIO / BUNDLE ============ -->
+<section class="section" id="comprar">
+  <div class="wrap">
+    <div class="pricing-grid">
+      <div class="hero-img-wrap reveal">
+        <div class="product-plate"></div>
+        <img src="https://apolocosmetics.com/cdn/shop/files/Shampooapolo_f65c26a6-f993-46ff-a9e8-e09d4f71cdf1.png" alt="Shampoo Estimulante Ultra Potente Apolo">
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Elige tu tratamiento</span>
+        <h2 style="font-size:30px; margin-bottom:8px; text-transform:uppercase;">Shampoo Estimulante Ultra Potente</h2>
+        <p style="color:var(--text-dim); margin-bottom:var(--sp-3);">400 mL · Envío gratis en pedidos de 2+ unidades · Garantía de 90 días</p>
+
+        <div class="plans plan-full" id="pricing-plans" role="radiogroup" aria-label="Elige tu plan">
+          <label class="plan" data-price="749" data-was="998" data-sync="hero-plans">
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-pricing" value="749"><div><div class="plan-name">1 Shampoo</div><div class="plan-sub">30 días de tratamiento</div></div></div>
+            <div class="plan-price"><span class="was">$998</span><span class="now">$749</span></div>
+          </label>
+          <label class="plan selected" data-price="1197" data-was="1996">
+            <span class="tag">Más vendido</span>
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-pricing" value="1197" checked><div><div class="plan-name">2 Shampoo <span class="save-tag">Ahorras $1,797</span></div><div class="plan-sub">60 días de tratamiento</div></div></div>
+            <div class="plan-price"><span class="was">$1,996</span><span class="now">$1,197</span></div>
+          </label>
+          <label class="plan" data-price="1596" data-was="2994">
+            <div class="plan-left"><input class="radio-input" type="radio" name="plan-pricing" value="1596"><div><div class="plan-name">3 Shampoo <span class="save-tag">Mejor valor</span></div><div class="plan-sub">90 días · cubre toda tu ventana de resultados</div></div></div>
+            <div class="plan-price"><span class="was">$2,994</span><span class="now">$1,596</span></div>
+          </label>
+        </div>
+
+        <a href="#" class="btn btn-block" id="add-cart-btn" style="margin-top:var(--sp-3);">Agregar al carrito — <span id="cart-price">$1,197</span></a>
+
+        <div class="guarantee-mini">🛡️ <b>90 días</b> de garantía · 🔒 Pago seguro · 📦 Envío gratis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TABLA COMPARATIVA ============ -->
+<section class="section section-alt" id="comparativa">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <span class="eyebrow center">Apolo vs. el resto</span>
+      <h2>¿Por qué este shampoo es distinto?</h2>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table>
+        <thead>
+          <tr><th>Característica</th><th class="col-apolo">Apolo.</th><th>Shampoo común</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Capilia Longa™ patentado</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+          <tr><td>Formulado por Químicos Fármaco Biólogos especializados</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+          <tr><td>Ayuda a frenar la caída</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+          <tr><td>Sin parabenos</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+          <tr><td>Garantía de 90 días</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+          <tr><td>Respaldado por la ciencia</td><td><span class="yes">✓</span></td><td><span class="no">×</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIA ============ -->
+<section class="section" id="garantia">
+  <div class="wrap">
+    <div class="guarantee-block reveal">
+      <div class="guarantee-badge">🛡️</div>
+      <div class="guarantee-days">90 DÍAS</div>
+      <h2>Si no notas menos caída, te devolvemos cada peso.</h2>
+      <p>Confiamos tanto en nuestra fórmula que asumimos todo el riesgo — y te damos toda la ventana que Capilia Longa™ necesita para demostrarlo: 90 días, no 30. Úsalo a diario. Si al terminar el frasco no notas menos pelo en tu cepillo, tu almohada o tu regadera, escríbenos a contacto@apolocosmetics.com y te devolvemos el 100% de tu dinero. Sin letra chica. Sin trucos. Sin preguntas incómodas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="problem-head reveal">
+      <span class="eyebrow center">Resolvemos tus dudas</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details open>
+        <summary>¿En cuánto tiempo voy a ver resultados? <span class="plus">+</span></summary>
+        <p>Cada cuero cabelludo responde diferente. Lo que sí podemos decir es que la fórmula está diseñada para usarse diariamente y los activos como Capilia Longa™ trabajan a nivel celular — eso requiere consistencia. Lo importante: si en cualquier momento no estás satisfecho, te devolvemos tu dinero.</p>
+      </details>
+      <details>
+        <summary>¿Y si en mi caso no funciona? <span class="faq-new-tag">Nueva</span> <span class="plus">+</span></summary>
+        <p>Por eso extendimos la garantía a 90 días: es tiempo suficiente para que tú mismo evalúes si funciona. Si no notas ninguna diferencia, te devolvemos el 100% de tu dinero sin condiciones.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si dejo de usarlo? <span class="faq-new-tag">Nueva</span> <span class="plus">+</span></summary>
+        <p>Como con cualquier tratamiento tópico para la caída, los beneficios dependen del uso continuo. Te recomendamos mantener la rutina diaria para conservar los resultados en el tiempo.</p>
+      </details>
+      <details>
+        <summary>¿Puedo usarlo todos los días? <span class="plus">+</span></summary>
+        <p>Sí. Está diseñado para uso diario. Su fórmula equilibrada limpia profundo sin resecar, gracias al aloe vera y a la ausencia de sulfatos agresivos.</p>
+      </details>
+      <details>
+        <summary>¿Sirve si ya tengo entradas marcadas o alopecia? <span class="plus">+</span></summary>
+        <p>El shampoo está formulado para ayudar a frenar la caída y cuidar el cabello existente. Si ya presentas entradas marcadas o alopecia avanzada, te recomendamos acudir con un dermatólogo o tricólogo — ellos podrán evaluar tu caso y apoyarte con un diagnóstico y tratamiento personalizado. Nuestro shampoo puede usarse como complemento dentro de la rutina si tu médico te lo permite.</p>
+      </details>
+      <details>
+        <summary>¿Tiene minoxidil como el bálsamo Apolo? <span class="plus">+</span></summary>
+        <p>No. Este shampoo está formulado con activos botánicos: Capilia Longa™, romero, aloe vera y menta. Es perfecto como complemento a tratamientos con minoxidil o como rutina diaria por sí solo.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto dura una botella? <span class="plus">+</span></summary>
+        <p>Una botella de 400 ml dura aproximadamente 4–6 semanas de uso diario, dependiendo de la cantidad de cabello.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto cuesta el envío y cuánto tarda? <span class="plus">+</span></summary>
+        <p>Tenemos envío gratis a todo México durante la promoción. Tiempo de entrega estándar: 4–6 días hábiles. Envío exprés disponible (72 horas hábiles).</p>
+      </details>
+      <details>
+        <summary>¿Cómo funciona la garantía? <span class="plus">+</span></summary>
+        <p>Si en cualquier momento no estás totalmente satisfecho dentro de los primeros 90 días, escríbenos a contacto@apolocosmetics.com y te devolvemos el 100% de tu dinero. Sin preguntas, sin trabas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section class="closing">
+  <div class="wrap reveal">
+    <h2 style="margin:0 auto 14px;">Hoy es el día que tu cabello recuerda quién manda.</h2>
+    <p>Únete a los más de 50,000 clientes que confiaron en Apolo. Empieza tu rutina hoy — con 90 días de garantía.</p>
+    <a href="#comprar" class="btn">Quiero recuperar mi cabello →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo">apolo<span>.</span></a>
+        <p style="color:var(--text-dim); font-size:13px; margin-top:12px; max-width:220px;">Ciencia capilar para que dejes de pensar en la caída cada mañana.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Producto</h5>
+          <a href="#formula">Shampoo Estimulante</a>
+          <a href="#comparativa">Bálsamo Anticaída</a>
+          <a href="#garantia">Garantía</a>
+        </div>
+        <div class="footer-col">
+          <h5>Ayuda</h5>
+          <a href="#faq">Preguntas frecuentes</a>
+          <a href="mailto:contacto@apolocosmetics.com">Contacto</a>
+          <a href="#">Rastrea tu envío</a>
+        </div>
+        <div class="footer-col">
+          <h5>Compañía</h5>
+          <a href="#problema">El problema real</a>
+          <a href="#comparativa">Apolo vs. el resto</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Apolo Cosmetics. Todos los derechos reservados.</span>
+      <span>Hecho para más de 50,000 clientes en México y Latinoamérica.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<div class="sticky-bar">
+  <div class="price">Desde <span id="sticky-price">$1,197</span><small>60 días de tratamiento</small></div>
+  <a href="#comprar" class="btn">Comprar →</a>
+</div>
+
+<script>
+  function fmt(n){ return '$' + Number(n).toLocaleString('es-MX'); }
+
+  function wirePlanGroup(container){
+    const plans = container.querySelectorAll('.plan[data-price]');
+    plans.forEach(p => {
+      p.addEventListener('click', () => {
+        plans.forEach(x => x.classList.remove('selected'));
+        p.classList.add('selected');
+        syncPrices(p.dataset.price, p.dataset.was);
+      });
+    });
+  }
+
+  function syncPrices(price, was){
+    document.querySelectorAll('#hero-price, #cart-price, #sticky-price').forEach(el => el.textContent = fmt(price));
+    const wasEl = document.getElementById('hero-price-was');
+    if(wasEl) wasEl.textContent = fmt(was);
+
+    document.querySelectorAll('.plan[data-price]').forEach(p => {
+      p.classList.toggle('selected', p.dataset.price === String(price));
+    });
+  }
+
+  document.querySelectorAll('.plans').forEach(wirePlanGroup);
+
+  // barra de progreso de lectura
+  const progressEl = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    if(progressEl) progressEl.style.width = scrolled + '%';
+    document.querySelector('header').classList.toggle('scrolled', h.scrollTop > 8);
+  }, { passive:true });
+
+  // revelado al hacer scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.15 });
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
